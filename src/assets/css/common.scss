@@ -1,0 +1,90 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: PingFangSC-Regular, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+// 面包屑样式
+.hander{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: #999;
+    .bread_txt{
+        margin-right: 10px;
+    }
+}
+/* 分页样式 */
+.page{
+    /* 用来修改分页器的样式 */
+    .pt_pagination .el-pagination{
+        font-weight: 400;
+    }
+    .pt_pagination .el-pagination.is-background .btn-next, .pt_pagination .el-pagination.is-background .btn-prev,  .el-pagination.is-background .el-pager li {
+        border: 1px solid $inputBorderColor;
+        background-color: $bg;
+        color: $titleColor;
+        min-width: 30px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 5px;
+        &:last-child{
+            display: none;
+        }
+    }
+    .pt_pagination .el-pagination.is-background .el-pager li:not(.disabled):hover {
+        /* // color: #fff;
+        // background-color: $mainColor;
+        // border: none; */
+        color: $mainColor;
+        border: 1px solid $mainColor;
+    }
+    .pt_pagination .el-pagination.is-background .el-pager li:not(.disabled).active {
+        /* // background-color: $mainColor;
+        // color: #fff;
+        // border: none; */
+        background-color: #fff;
+        color: $mainColor;
+        border: 1px solid $mainColor;
+        display: inline-block;
+    }
+    .pt_pagination .el-pagination button, .pt_pagination .el-pagination span:not([class*=suffix]){
+        line-height: 32px;
+    }
+    .pt_pagination .el-pagination.is-background .btn-next, .pt_pagination .el-pagination.is-background .btn-prev{
+        width: 80px;
+    }
+    .pt_pagination .el-pagination.is-background .btn-prev:disabled, .pt_pagination .el-pagination.is-background .btn-next:disabled{
+        color: $textColor;
+    }
+    .pt_pagination .pt_pagination .el-pagination span:not([class*=suffix]){
+        font-weight: 400;
+    }
+    .pt_pagination .el-pagination__editor.el-input .el-input__inner{
+        height: 30px;
+    }
+    .el-pagination__sizes{
+        height: 32px;
+        .el-input__inner{
+            height: 32px;
+        }
+        .el-input .el-input__inner:hover{
+            /*// color: #fff;
+            // background-color: $mainColor;*/
+            border-color: #DCDFE6;
+        }
+        .el-input .el-input__inner:active{
+            /* // color: #fff;
+            // background-color: $mainColor;*/
+            border-color: #DCDFE6;
+        }
+        .el-select .el-input__inner:focus{
+            border-color: #DCDFE6;
+        }
+        .el-pagination__jump{
+            margin-left: 10px;
+        }
+    }
+}
